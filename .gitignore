@@ -1,0 +1,15 @@
+# Python
+.env
+.venv
+.pytest_cache
+.python-version
+__pycache__
+
+#OS X
+.DS_Store
+
+# unnecessary source files
+/contracts/crv_src/
+
+# output file
+output.txt

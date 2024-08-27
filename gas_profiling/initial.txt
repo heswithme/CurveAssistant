@@ -1,0 +1,105 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
+rootdir: /Users/michael/Documents/projects/vyper_ctf
+plugins: cov-5.0.0, hypothesis-6.108.5, web3-6.20.1, anyio-4.4.0, titanoboa-0.2.0
+collected 1 item
+
+tests/CurveAssistant/test_load.py .                                      [100%]                                                                                                                                             
+                                                                                                                                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━━┓
+┃ Contract                                             ┃ Computation                    ┃ Count ┃ Mean   ┃ Median ┃ Stdev ┃ Min    ┃ Max    ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━━┩
+│ Path: contracts                                      │                                │       │        │        │       │        │        │
+│ Name: CurveAssistant.vy                              │                                │       │        │        │       │        │        │
+│ Address: 0x70Ea0d019db59076a5c418Cb6923991D0C371FBB  │                                │       │        │        │       │        │        │
+│                                                      │ load_coins_to_pools            │ 100   │ 439684 │ 438548 │ 8624  │ 438548 │ 518148 │
+└──────────────────────────────────────────────────────┴────────────────────────────────┴───────┴────────┴────────┴───────┴────────┴────────┘
+
+                                                                                                                                                                                                  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
+┃ Contract                                             ┃ Computation                                                                     ┃ Count ┃ Mean    ┃ Median  ┃ Stdev ┃ Min     ┃ Max     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━╇━━━━━━━━━╇━━━━━━━━━┩
+│ Path: contracts                                      │                                                                                 │       │         │         │       │         │         │
+│ Name: CurveAssistant.vy                              │                                                                                                                                                                                                                                                                                   │       │         │         │       │         │         │
+│ Address: 0x70Ea0d019db59076a5c418Cb6923991D0C371FBB  │                                                                                 │ Count │ Mean    │ Median  │ Stdev │ Min     │ Max     │
+│ ---------------------------------------------------- │ --------------------------------------------------------------------------      │ ----- │ -----   │ -----   │ ----- │ -----   │ -----   │
+│ Function:                                            │  49: self.seen = True                                                           │ 100   │ 465393  │ 465393  │ 0     │ 465393  │ 465393  │
+│                                                      │ 121: def convert_to_one(                                                        │ 100   │ 60672   │ 60672   │ 0     │ 60672   │ 60672   │
+│                                                      │  64: liq_loader.__init__()                                                      │ 100   │ 5583    │ 5508    │ 750   │ 5508    │ 13008   │
+│                                                      │  36:                                                                            │ 100   │ 4472    │ 4472    │ 0     │ 4472    │ 4472    │
+│                                                      │  84: assert not self._detect_duplicates(coins_list), "Duplicate coins provided… │ 100   │ 3614    │ 3614    │ 0     │ 3614    │ 3614    │
+│                                                      │  73: coins_list: DynArray,                                                      │ 100   │ 3033    │ 3033    │ 0     │ 3033    │ 3033    │
+│                                                      │ 163: pools_list: DynArray,                                                      │ 100   │ 2911    │ 2911    │ 0     │ 2911    │ 2911    │
+│                                                      │ 156: return res                                                                 │ 100   │ 1836    │ 1836    │ 0     │ 1836    │ 1836    │
+│                                                      │  40: seen: HashMap # need this hashmap to detect duplicates, kept clean after … │ 100   │ 1755    │ 1755    │ 0     │ 1755    │ 1755    │
+│                                                      │  93: for i: uint256 in range(len(coins_list), bound=utils.MAX_COINS):           │ 100   │ 2490    │ 1694    │ 7960  │ 1694    │ 81294   │
+│                                                      │  85: self._unsee(coins_list)                                                    │ 100   │ 1554    │ 1554    │ 0     │ 1554    │ 1554    │
+│                                                      │  48: if not self.seen:                                                          │ 100   │ 1513    │ 1373    │ 1400  │ 1373    │ 15373   │
+│                                                      │  39: # mapping for duplicates check                                             │ 100   │ 1294    │ 1294    │ 0     │ 1294    │ 1294    │
+│                                                      │  47: element: address = arr                                                     │ 100   │ 1078    │ 1078    │ 0     │ 1078    │ 1078    │
+│                                                      │  44: def _detect_duplicates(arr: DynArray) -> bool:                             │ 100   │ 999     │ 999     │ 0     │ 999     │ 999     │
+│                                                      │ 105: @external                                                                  │ 100   │ 937     │ 912     │ 250   │ 912     │ 3412    │
+│                                                      │ 114: self._unsee(pools_list)                                                    │ 100   │ 912     │ 912     │ 0     │ 912     │ 912     │
+│                                                      │  41: slippage_map: HashMap # for slippage protection                            │ 100   │ 855     │ 855     │ 0     │ 855     │ 855     │
+│                                                      │  96: user_allowance: uint256 = staticcall coin_contract.allowance(msg.sender, … │ 100   │ 812     │ 812     │ 0     │ 812     │ 812     │
+│                                                      │  95: user_balance: uint256 = staticcall coin_contract.balanceOf(msg.sender)     │ 100   │ 885     │ 785     │ 1000  │ 785     │ 10785   │
+│                                                      │  63: def __init__():                                                            │ 100   │ 774     │ 774     │ 0     │ 774     │ 774     │
+│                                                      │  91:                                                                            │ 100   │ 756     │ 756     │ 0     │ 756     │ 756     │
+│                                                      │  83: # detect duplicates (clear "seen" mapping to preserve duplicates detectio… │ 100   │ 732     │ 732     │ 0     │ 732     │ 732     │
+│                                                      │  78: # validate inputs                                                          │ 100   │ 678     │ 678     │ 0     │ 678     │ 678     │
+│                                                      │  92: # validate allowances                                                      │ 100   │ 676     │ 676     │ 0     │ 676     │ 676     │
+│                                                      │  35: initializes: coins_converter                                               │ 100   │ 675     │ 675     │ 0     │ 675     │ 675     │
+│                                                      │ 122: coins_list: DynArray,                                                      │ 100   │ 606     │ 606     │ 0     │ 606     │ 606     │
+│                                                      │ 101: return liq_loader.load_liq(coins_list, amounts_to_use, pools_list)         │ 100   │ 563     │ 563     │ 0     │ 563     │ 563     │
+│                                                      │  37:                                                                            │ 100   │ 563     │ 563     │ 0     │ 563     │ 563     │
+│                                                      │  75: pools_list: DynArray                                                       │ 100   │ 546     │ 546     │ 0     │ 546     │ 546     │
+│                                                      │  46: for i: uint256 in range(len(arr), bound=max(utils.MAX_POOLS,utils.MAX_COI… │ 100   │ 465     │ 465     │ 0     │ 465     │ 465     │
+│                                                      │ 100:                                                                            │ 100   │ 465     │ 465     │ 0     │ 465     │ 465     │
+│                                                      │  98: amounts_to_use.append(min(user_balance, coin_amount))                      │ 100   │ 456     │ 456     │ 0     │ 456     │ 456     │
+│                                                      │  99: assert user_allowance >= amounts_to_use, "Approve tokens first!"           │ 100   │ 455     │ 455     │ 0     │ 455     │ 455     │
+│                                                      │ 118:                                                                            │ 100   │ 435     │ 435     │ 0     │ 435     │ 435     │
+│                                                      │  57: for i: uint256 in range(len(arr), bound=max(utils.MAX_POOLS,utils.MAX_COI… │ 100   │ 396     │ 396     │ 0     │ 396     │ 396     │
+│                                                      │  58: element: address = arr                                                     │ 100   │ 385     │ 385     │ 0     │ 385     │ 385     │
+│                                                      │  72: def load_coins_to_pools(                                                   │ 100   │ 341     │ 341     │ 0     │ 341     │ 341     │
+│                                                      │  77:                                                                            │ 100   │ 336     │ 336     │ 0     │ 336     │ 336     │
+│                                                      │  88: self._unsee(pools_list)                                                    │ 100   │ 306     │ 306     │ 0     │ 306     │ 306     │
+│                                                      │  94: coin_contract: IERC20 = IERC20(coins_list)                                 │ 100   │ 290     │ 290     │ 0     │ 290     │ 290     │
+│                                                      │ 157:                                                                            │ 100   │ 279     │ 279     │ 0     │ 279     │ 279     │
+│                                                      │  82:                                                                            │ 100   │ 268     │ 268     │ 0     │ 268     │ 268     │
+│                                                      │  74: coin_amounts: DynArray,                                                    │ 100   │ 260     │ 260     │ 0     │ 260     │ 260     │
+│                                                      │  89:                                                                            │ 100   │ 256     │ 256     │ 0     │ 256     │ 256     │
+│                                                      │  30:                                                                            │ 100   │ 234     │ 234     │ 0     │ 234     │ 234     │
+│                                                      │  81: assert len(pools_list) > 0, "Provide pools to add liquidity to!"           │ 100   │ 229     │ 229     │ 0     │ 229     │ 229     │
+│                                                      │  90: amounts_to_use: DynArray = []                                              │ 100   │ 223     │ 223     │ 0     │ 223     │ 223     │
+│                                                      │  97: coin_amount: uint256 = coin_amounts                                        │ 100   │ 220     │ 220     │ 0     │ 220     │ 220     │
+│                                                      │ 159: @external                                                                  │ 100   │ 207     │ 207     │ 0     │ 207     │ 207     │
+│                                                      │ 110: # validate inputs                                                          │ 100   │ 192     │ 192     │ 0     │ 192     │ 192     │
+│                                                      │  29: initializes: liq_loader                                                    │ 100   │ 192     │ 192     │ 0     │ 192     │ 192     │
+│                                                      │ 113: assert not self._detect_duplicates(pools_list), "Duplicate pools provided… │ 100   │ 173     │ 173     │ 0     │ 173     │ 173     │
+│                                                      │  76: ) -> DynArray:                                                             │ 100   │ 171     │ 171     │ 0     │ 171     │ 171     │
+│                                                      │ 104: @nonreentrant                                                              │ 100   │ 171     │ 171     │ 0     │ 171     │ 171     │
+│                                                      │ 117:                                                                            │ 100   │ 171     │ 171     │ 0     │ 171     │ 171     │
+│                                                      │  66: coins_converter.__init__()                                                 │ 100   │ 168     │ 168     │ 0     │ 168     │ 168     │
+│                                                      │  33:                                                                            │ 100   │ 168     │ 168     │ 0     │ 168     │ 168     │
+│                                                      │  42:                                                                            │ 100   │ 136     │ 136     │ 0     │ 136     │ 136     │
+│                                                      │ 155: self.slippage_map = 0                                                      │ 100   │ 108     │ 108     │ 0     │ 108     │ 108     │
+│                                                      │  87: assert not self._detect_duplicates(pools_list), "Duplicate pools provided… │ 100   │ 90      │ 90      │ 0     │ 90      │ 90      │
+│                                                      │  52: return has_duplicates                                                      │ 100   │ 89      │ 89      │ 0     │ 89      │ 89      │
+│                                                      │ 119: @nonreentrant                                                              │ 100   │ 75      │ 75      │ 0     │ 75      │ 75      │
+│                                                      │ 124: pools_list: DynArray,                                                      │ 100   │ 59      │ 59      │ 0     │ 59      │ 59      │
+│                                                      │  80: assert len(coins_list) == len(coin_amounts), "Provide amounts for coins!"  │ 100   │ 32      │ 32      │ 0     │ 32      │ 32      │
+│                                                      │ 107: pools_list: DynArray                                                       │ 100   │ 32      │ 32      │ 0     │ 32      │ 32      │
+│                                                      │  79: assert len(coins_list) > 0, "Provide coins to add liquidity!"              │ 100   │ 20      │ 20      │ 0     │ 20      │ 20      │
+│                                                      │  51: has_duplicates = True                                                      │ 100   │ 19      │ 19      │ 0     │ 19      │ 19      │
+│                                                      │  45: has_duplicates: bool = False                                               │ 100   │ 16      │ 16      │ 0     │ 16      │ 16      │
+│                                                      │  67: pass                                                                       │ 100   │ 8       │ 8       │ 0     │ 8       │ 8       │
+│                                                      │  68:                                                                            │ 100   │ 8       │ 8       │ 0     │ 8       │ 8       │
+│                                                      │  69:                                                                            │ 100   │ 8       │ 8       │ 0     │ 8       │ 8       │
+│                                                      │  70: @nonreentrant                                                              │ 100   │ 8       │ 8       │ 0     │ 8       │ 8       │
+│                                                      │  71: @external                                                                  │ 100   │ 8       │ 8       │ 0     │ 8       │ 8       │
+│                                                      │ 116: return liq_unloader.unload_liq(pools_list)                                 │ 100   │ 6       │ 6       │ 0     │ 6       │ 6       │
+│                                                      │  59: self.seen = False                                                          │ 100   │ -138117 │ -138117 │ 0     │ -138117 │ -138117 │
+└──────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴───────┴─────────┴─────────┴───────┴─────────┴─────────┘
+
+
+============================== 1 passed in 52.24s ==============================

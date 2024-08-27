@@ -1,0 +1,7 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.4, pytest-8.3.2, pluggy-1.5.0
+rootdir: /Users/michael/Documents/projects/vyper_ctf
+plugins: cov-5.0.0, hypothesis-6.108.5, web3-6.20.1, anyio-4.4.0, titanoboa-0.2.0
+collected 1 item
+
+tests/CurveAssistant/test_load.py 
